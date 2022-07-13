@@ -1,0 +1,11 @@
+footer {
+    color: $gray-text;
+
+    .inner-footer {
+        width: 90%;
+        min-height: 10vh;
+        padding: 0 10rem;
+        margin: auto;
+        @include flex(flex-start, center, row);
+    }
+}

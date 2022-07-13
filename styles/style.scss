@@ -1,0 +1,98 @@
+$header1: 2.5rem;
+$header2: 4rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text:2.5rem;
+$gradient: linear-gradient(to right, rgb(254, 254, 111), rgb(246, 248, 209));
+$gradient1: linear-gradient(20deg, rgb(246, 248, 209), rgb(217, 218, 93), rgb(166, 167, 64), rgb(140, 141, 50), rgb(140, 141, 50));
+$background-color:rgb(140, 141, 50);
+$gray-text:#2c2c2c;
+
+@mixin flex($justify, $align, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@import 'global';
+@import 'intro';
+@import 'projects';
+@import 'contact';
+@import 'footer';
+
+@media screen and (max-width: 1532px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    svg {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 959px) {
+
+    svg {
+        height: 60%;
+    }
+}
+
+
+@media screen and (max-width: 754px) {
+
+    html {
+        font-size: 45%;
+    }
+
+    .main-head {
+        width: 100%;
+    }
+
+    nav {
+        .logo {
+            @include flex(center, center, column);
+            flex: 1 1 30rem;
+            margin-top: 2rem;
+        }
+
+        ul {
+            flex: 1 1 60rem;
+            margin: 2rem 0;
+        }
+
+    }
+
+    .intro-text {
+        margin-top: 5rem;
+        text-align: center;
+    }
+
+    .intro-images {
+        text-align: center
+    }
+
+    .intro-social {
+        @include flex(center, center, row);
+
+        a {
+            margin: 2rem;
+        }
+    }
+
+    form {
+        padding: 0;
+        width: 80%;
+    }
+
+    footer {
+        .inner-footer {
+            @include flex(center, center, row);
+        }
+    }
+}

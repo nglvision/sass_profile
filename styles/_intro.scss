@@ -1,0 +1,157 @@
+.main-head {
+    width: 95%;
+    margin: 0 0 0 auto;
+    padding: 0 10rem;
+}
+
+nav {
+    @include flex(space-between, center, row);
+    min-height: 10vh;
+    width: 80%;
+    flex-wrap: wrap;
+
+    .logo {
+        @include flex(flex-start, center, row);
+        flex: 1 1 14rem;
+
+        h1 {
+            margin: 2rem;
+        }
+    }
+
+    ul {
+        @include flex(space-around, center, row);
+        flex: 1 1 40rem;
+    }
+}
+
+.intro {
+    min-height: 90vh;
+    width: 90%;
+    margin: auto;
+    background: $gradient1;
+    flex-wrap: wrap;
+    @include flex(space-between, center, row);
+    border-radius: 5rem;
+
+    h2 {
+        font-size: 6rem;
+        padding: 2rem 10rem;
+        background: $gradient;
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    h3 {
+        font-size: 5rem;
+        padding: 2rem 10rem;
+    }
+
+    p {
+        padding: 2rem 10rem;
+        font-weight: bold;
+        color: $gray-text;
+    }
+}
+
+.intro-social {
+    margin: 4rem 10rem;
+
+    a {
+        margin-right: 4rem;
+    }
+}
+
+.active {
+    background: $gray-text;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+}
+
+.intro-text,
+.intro-images {
+    flex: 1 1 50rem;
+}
+
+#flower1 {
+    transform: scale(0);
+    animation: starting 2s ease-in-out 1s forwards, shake 3.2s ease infinite alternate 4s;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+#flower2 {
+    transform: scale(0);
+    animation: starting 2.1s ease-in-out 1.2s forwards, shake 5.4s infinite alternate 4.2s;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+#flower3 {
+    transform: scale(0);
+    animation: starting 2.2s ease-in-out 1.4s forwards, shake 3.6s infinite alternate 4.4s;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+#flower4 {
+    transform: scale(0);
+    animation: starting 2.3s ease-in-out 1.6s forwards, shake 4.8s infinite alternate 4.6s;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+#flower5 {
+    transform: scale(0);
+    animation: starting 2.4s ease-in-out 1.8s forwards, shake 4s infinite alternate 4.8s;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+#flower6 {
+    transform: scale(0);
+    animation: starting 2.5s ease-in-out 2s forwards, shake 4.2s infinite alternate 5s;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+#flower7 {
+    transform: scale(0);
+    animation: starting 2.6s ease-in-out 2.2s forwards, shake 4.4s infinite alternate 5.2s;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+@keyframes starting {
+    0% {
+        transform: rotate(30deg) scale(0);
+    }
+
+    30% {
+        transform: rotate(0deg) scale(0.4);
+    }
+
+    70% {
+        transform: rotate(30deg) scale(0.9);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0) scale(1) translate(0);
+    }
+
+    50% {
+        transform: rotate(-5deg) scale(0.95) translate(0);
+    }
+
+    100% {
+        transform: rotate(5deg) scale(0.9) translate(5%);
+    }
+}
